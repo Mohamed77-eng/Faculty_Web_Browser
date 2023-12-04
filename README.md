@@ -6,5 +6,5 @@
   - Home page
   - CS page
   - IT page
-  - IS page 
+  - IS page
 
