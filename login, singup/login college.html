@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(imgs/login\,signup.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            background-color: #333333bb;
+            width: 300px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .input-field {
+            height: 30px;
+            border-radius: 5px;
+            padding: 8px;
+            border: solid thin #aaa;
+            width: calc(100% - 16px);
+            margin-bottom: 15px;
+        }
+
+        .submit-button {
+            padding: 10px;
+            width: 100%;
+            color: white;
+            background-color: #d38940;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: rgb(166, 111, 29);
+        }
+
+        .link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Login</h2>
+        <form method="post">
+            <input class="input-field" type="email" name="mail" placeholder="E-mail"><br><br>
+            <input class="input-field" type="password" name="password" placeholder="Password"><br><br>
+            <input class="submit-button" type="submit" value="Login"><br><br>
+            <a class="link" href="signup college.html">Click to Signup</a><br><br>
+        </form>
+    </div>
+</body>
+</html>
