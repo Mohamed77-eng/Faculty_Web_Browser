@@ -68,7 +68,7 @@ nav ul li a.a1 {
 /*                                                Sections                                                 */
 .section-with-background {
   height: 340px; /* Adjust the height as needed */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Faculty_Web_Browser/Home/imgs/5.1.jpg'); /* Replace with your background image path */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imgs/5.1.jpg'); /* Replace with your background image path */
   background-size: cover;
   background-position: center;
   display: flex;
