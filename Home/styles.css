@@ -85,6 +85,72 @@ nav ul li a.a1 {
   /* Any additional styling you want */
 }
 
+/* New Section with Three Horizontal Squares */
+/* Add this CSS */
+* {
+  box-sizing: border-box;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 50px; /* Adjust margin */
+}
+
+.custom-content {
+  width: calc(30% - 20px); /* Adjust width and gap */
+  margin: 0 10px; /* Adjust gap */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.custom-content img {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  display: block;
+}
+
+.custom-content h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0078d4;
+  margin-top: 10px;
+}
+
+.custom-content p {
+  text-align: justify;
+  font-size: 16px;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.custom-content .learn-more {
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin: 10px auto 0;
+  background-color: #0078d4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.custom-content .learn-more:hover {
+  background-color: #005a9e;
+}
+
+
 .section-about {
   background-color: #f2f2f2;
   padding: 50px 20px;

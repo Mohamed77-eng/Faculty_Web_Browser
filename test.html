@@ -1,101 +1,84 @@
-<!DOCTYPE html>
 <html>
 <head>
 <style>
-/* General styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-/* Card styles */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border-radius: 8px;
-  overflow: hidden;
+  float: left;
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.card-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
 }
 
-/* Container styles */
-.container {
-  padding: 16px;
+.card-title {
   text-align: center;
-}
-
-/* Flex container styles */
-.flex-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 50px;
-}
-
-/* Individual card styles */
-.card:nth-child(1) {
-  background: linear-gradient(to bottom, #f7f7f7, #e6e6e6);
-}
-
-.card:nth-child(2) {
-  background: linear-gradient(to bottom, #e0e0e0, #cccccc);
-}
-
-.card:nth-child(3) {
-  background: linear-gradient(to bottom, #d6d6d6, #c0c0c0);
-}
-
-/* Heading styles */
-h4 {
-  margin: 8px 0;
-  color: #333;
+  font-size: 24px;
   font-weight: bold;
+  color: #0078d4;
 }
 
-/* Additional styling for specific content */
-.card:nth-child(1) h4 {
-  font-size: 24px;
+.card-text {
+  text-align: justify;
+  font-size: 16px;
+  color: #333333;
 }
 
-.card:nth-child(2) h4:first-child {
-  font-size: 30px;
+.card-button {
+  width: 100px;
+  height: 40px;
+  margin: 10px auto;
+  display: block;
+  background-color: #0078d4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.card:nth-child(2) h4:last-child {
-  font-size: 18px;
+.card-button:hover {
+  background-color: #005a9e;
 }
 
-.card:nth-child(3) h4 {
-  font-size: 24px;
-}
 </style>
 </head>
-<body>
+<body style="background-color: #c9c9c9;">
 
-<div class="flex-container">
-  <div class="card">
-    <div class="container">
-      <h4>2k+</h4>
-      <h4>Students</h4>
-    </div>
-  </div>
+<div class="card">
+  <img src="computer.png" alt="Computer" class="card-icon">
+  <h3 class="card-title">Software Services</h3>
+  <p class="card-text">Quisque magna nisi dapibus eget
+planta sagittis fames nunc.</p>
+  <button class="card-button">Learn more</button>
+</div>
 
-  <div class="card">
-    <div class="container">
-      <h4>3.50</h4>
-      <h4>Average GPA</h4>
-    </div>
-  </div>
+<div class="card">
+  <img src="cloud.png" alt="Cloud" class="card-icon">
+  <h3 class="card-title">Cloud Services</h3>
+  <p class="card-text">Quisque magna nisi dapibus eget
+planta sagittis fames nunc.</p>
+  <button class="card-button">Learn more</button>
+</div>
 
-  <div class="card">
-    <div class="container">
-      <h4>95%</h4>
-      <h4>Graduates</h4>
-    </div>
-  </div>
+<div class="card">
+  <img src="shield.png" alt="Shield" class="card-icon">
+  <h3 class="card-title">Security Services</h3>
+  <p class="card-text">Quisque magna nisi dapibus eget
+planta sagittis fames nunc.</p>
+  <button class="card-button">Learn more</button>
 </div>
 
 </body>
