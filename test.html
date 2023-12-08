@@ -1,85 +1,66 @@
-<html>
-<head>
-<style>
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .banner {
+        width: 100%;
+        background: linear-gradient(to right, yellow, orange);
+        color: white;
+      }
 
-.card {
-  float: left;
-  width: 30%;
-  margin: 10px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+      }
 
-.card-icon {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  display: block;
-}
+      .banner-image {
+        width: 50%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
 
-.card-title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #0078d4;
-}
+      .banner-image:hover {
+        transform: scale(1.1); /* Increases image size on hover */
+      }
 
-.card-text {
-  text-align: justify;
-  font-size: 16px;
-  color: #333333;
-}
+      .banner-text {
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+      }
 
-.card-button {
-  width: 100px;
-  height: 40px;
-  margin: 10px auto;
-  display: block;
-  background-color: #0078d4;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
+      .banner-button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        transition: background 0.3s, color 0.3s;
+      }
 
-.card-button:hover {
-  background-color: #005a9e;
-}
-
-</style>
-</head>
-<body style="background-color: #c9c9c9;">
-
-<div class="card">
-  <img src="computer.png" alt="Computer" class="card-icon">
-  <h3 class="card-title">Software Services</h3>
-  <p class="card-text">Quisque magna nisi dapibus eget
-planta sagittis fames nunc.</p>
-  <button class="card-button">Learn more</button>
-</div>
-
-<div class="card">
-  <img src="cloud.png" alt="Cloud" class="card-icon">
-  <h3 class="card-title">Cloud Services</h3>
-  <p class="card-text">Quisque magna nisi dapibus eget
-planta sagittis fames nunc.</p>
-  <button class="card-button">Learn more</button>
-</div>
-
-<div class="card">
-  <img src="shield.png" alt="Shield" class="card-icon">
-  <h3 class="card-title">Security Services</h3>
-  <p class="card-text">Quisque magna nisi dapibus eget
-planta sagittis fames nunc.</p>
-  <button class="card-button">Learn more</button>
-</div>
-
-</body>
+      .banner-button:hover {
+        background: white;
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="banner">
+      <div class="container">
+        <img src="welder.jpg" alt="Welder" class="banner-image">
+        <div class="banner-text">
+          <h1>About our Company</h1>
+          <p>Building a more competitive business sector.</p>
+          <a href="#" class="banner-button">More info</a>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
