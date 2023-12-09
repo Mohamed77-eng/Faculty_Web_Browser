@@ -1,0 +1,241 @@
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+/*-------------------------------------------Header-------------------------------------------*/
+
+/*            Fonts             */
+@font-face{
+  font-family: Raleway;
+  src: url(fonts/Raleway-Medium.ttf);
+
+}
+
+header {
+  background-color: #192655;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  margin-left: 10px;
+  max-width: 45px; 
+  max-height: 45px; 
+}
+
+.title {
+  flex-grow: 1; 
+}
+
+header h1 {
+  color: #dedede;
+  font-size: 22px;
+  font-family: Raleway;
+  margin: 10px;
+  margin-left: 10px;
+}
+/*-------------------------------------------Nav Bar-------------------------------------------*/
+/* Styling for navigation */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-left: 30px;
+}
+nav ul li:first-child {
+  margin-left: 0;
+}
+nav ul li a {
+  text-transform: capitalize;
+  color: #dedede;
+  font-size: 17px ;
+  font-weight: 200 ;
+  display: inline-flex; /* Aligns inline with flexbox properties */
+  align-items: center; /* Aligns items vertically */
+  height: 50px; /* Set height equal to the image */
+  text-decoration: none;
+  align-items: center;
+}
+nav ul li a.person1 img {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+}
+nav ul li a:not(.button) {
+  position: relative;  /* The postion will be relatively changed upon a::before */
+  font-family: sans-serif;
+  transition: .5s; 
+}
+/*                               Hover Styling                              */
+/* Underline */
+a:not(.button)::before {
+  position : absolute;
+  width : 0%;
+  height: 2px;
+  content: '';
+  background-color: #3876BF;
+  bottom : 10px;
+  transition: .5s;
+}
+a:not(.button):hover {
+  color :#3876BF;
+}
+a:not(.button):hover::before{
+  width : 100%;
+}
+/*                                Button Styling                            */
+.button{
+  font-family : "Roboto", sans-serif;
+  font-size : 15px;
+  background-color: #3876BF;
+  text-align: center;
+  margin-right: 30px;
+  margin-top: 5px ;
+  height: 40px;
+  width : 75px;
+  padding : 10px;
+  border-radius: 5px;
+  cursor : pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: .5s;
+}
+.button:hover, .button:focus, .button:active{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  transition: .5s;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:700,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* Sections */
+.section {
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+}
+
+/* Containers */
+.content-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  clip: rect(auto, auto, auto, auto);
+  pointer-events: none;
+}
+.content-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 0;
+  z-index: 99;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  pointer-events: all;
+}
+.content-center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Aesthetics */
+.top-section {
+  background: linear-gradient(135deg, #f4583a 0%, #cd1e38 100%);
+}
+.bottom-section {
+  background: #d4fef2;
+}
+.section h1 {
+  font-size: 200px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+.section p,
+.section a {
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content-theme-dark h1 {
+  color: #e33e39;
+  text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+.content-theme-dark p,
+.content-theme-dark a {
+  color: #fea98d;
+}
+.content-theme-light h1 {
+  color: #062930;
+  text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+.content-theme-light p,
+.content-theme-light a {
+  color: #728e93;
+}
+
+/* -----------------------------------------Footer------------------------------------------------------ */
+footer {
+  background-color: #192655;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+
+.footer-content {
+  color: #dedede;
+  font-size: 14px;
+}
+
+.footer-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.college-logo img {
+  max-width: 35px;
+  max-height: 35px;
+  margin-right: 10px;
+  position: relative; 
+  top: 12px; 
+}
+
+.college-name h5 {
+  color: #dedede;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1; 
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
