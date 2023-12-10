@@ -2,13 +2,12 @@ body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
 }
-/*-------------------------------------------Header-------------------------------------------*/
 
+/*-------------------------------------------Header-------------------------------------------*/
 /*            Fonts             */
 @font-face{
   font-family: Raleway;
   src: url(fonts/Raleway-Medium.ttf);
-
 }
 
 header {
@@ -18,17 +17,14 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
 .logo img {
   margin-left: 10px;
   max-width: 45px; 
   max-height: 45px; 
 }
-
 .title {
   flex-grow: 1; 
 }
-
 header h1 {
   color: #dedede;
   font-size: 22px;
@@ -36,8 +32,8 @@ header h1 {
   margin: 10px;
   margin-left: 10px;
 }
+
 /*-------------------------------------------Nav Bar-------------------------------------------*/
-/* Styling for navigation */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -55,9 +51,9 @@ nav ul li a {
   color: #dedede;
   font-size: 17px ;
   font-weight: 200 ;
-  display: inline-flex; /* Aligns inline with flexbox properties */
-  align-items: center; /* Aligns items vertically */
-  height: 50px; /* Set height equal to the image */
+  display: inline-flex;
+  align-items: center; 
+  height: 50px; 
   text-decoration: none;
   align-items: center;
 }
@@ -108,7 +104,67 @@ a:not(.button):hover::before{
   transition: .5s;
 }
 
-/* -----------------------------------------Footer------------------------------------------------------ */
+/* -----------------------------------------Sections------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+main {
+  padding: 20px;
+}
+section {
+  margin-bottom: 30px;
+}
+h2 {
+  margin-bottom: 10px;
+}
+.member {
+  text-align: center;
+}
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+section {
+  background-color: #3876BF; 
+  color: rgb(245, 235, 235);
+  padding: 20px;
+  border-radius: 8px; 
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* CSS for the events section */
+#events {
+  background-color: #3876BF; 
+  color: #fff; 
+  padding: 30px;
+}
+.event-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.event {
+  background-color: #fff; 
+  color: #3876BF;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.event:hover {
+  transform: translateY(-5px);
+}
+
+/* -----------------------------------------Footer----------------------------------------- */
 footer {
   background-color: #192655;
   padding: 10px;
@@ -119,7 +175,6 @@ footer {
   color: #dedede;
   font-size: 14px;
 }
-
 .footer-left {
   position: absolute;
   bottom: 10px;
@@ -127,7 +182,6 @@ footer {
   display: flex;
   align-items: flex-end;
 }
-
 .college-logo img {
   max-width: 35px;
   max-height: 35px;
@@ -135,7 +189,6 @@ footer {
   position: relative; 
   top: 12px; 
 }
-
 .college-name h5 {
   color: #dedede;
   font-size: 18px;
