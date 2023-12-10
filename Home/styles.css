@@ -236,7 +236,7 @@ a:not(.button):hover::before{
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(56, 118, 191, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(26, 8, 159, 0.5);
 }
 
 .container {
