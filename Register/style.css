@@ -1,0 +1,66 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(bg11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+span {
+    color: beige;
+    font-size: small;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+header {
+    color: beige;
+    font-size: 30px;
+    display: flex;
+    padding: 10px 0 10px 0;
+}
+
+.choice {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    transition: color 0.3s ease-in-out; /* Adding transition for smooth color change */
+}
+
+.choice:hover {
+    color: grey/* your hover color here */ ;
+}
+
+.choice-field1,
+.choice-field2 {
+    height: 50px;
+    width: 400px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Adding transition for smooth effect */
+}
+
+.choice-field1:hover,
+.choice-field2:hover {
+    transform: scale(1.1); /* Increasing the size on hover */
+}
+
+.check-box {
+    color: beige;
+}
