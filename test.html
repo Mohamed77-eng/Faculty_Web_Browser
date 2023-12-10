@@ -1,149 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Raleway:700,900");
-
-      * {
-        margin: 0;
-        padding: 0;
-        border: none;
-      }
-      body {
-        font-size: 14px;
-        font-family: "Raleway", sans-serif;
-      }
-      a {
-        text-decoration: none;
-      }
-
-      /* Sections */
-      .section {
-        height: 100vh;
-        min-height: 500px;
-        position: relative;
-      }
-
-      /* Containers */
-      .content-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-        clip: rect(auto, auto, auto, auto);
-        pointer-events: none;
-      }
-      .content-inner {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        padding: 0;
-        z-index: 99;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        will-change: transform;
-        -webkit-perspective: 1000;
-        perspective: 1000;
-        pointer-events: all;
-      }
-      .content-center {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      /* Aesthetics */
-      .top-section {
-        background: linear-gradient(135deg, #f4583a 0%, #cd1e38 100%);
-      }
-      .bottom-section {
-        background: #d4fef2;
-      }
-      .section h1 {
-        font-size: 200px;
-        font-weight: 900;
-        text-transform: uppercase;
-        text-align: center;
-      }
-      .section p,
-      .section a {
-        font-weight: 700;
-        letter-spacing: 7px;
-        text-transform: uppercase;
-        text-align: center;
-      }
-
-      .content-theme-dark h1 {
-        color: #e33e39;
-        text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-      }
-      .content-theme-dark p,
-      .content-theme-dark a {
-        color: #fea98d;
-      }
-      .content-theme-light h1 {
-        color: #062930;
-        text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-      }
-      .content-theme-light p,
-      .content-theme-light a {
-        color: #728e93;
-      }
-    </style>
-  </head>
-  <body>
-    <section class="section top-section">
-      <div class="content-container content-theme-dark">
-        <div class="content-inner">
-          <div class="content-center">
-            <h1>Finest</h1>
-            <p>
-              Dual Color Text Effect
-              <a href="http://finestpixels.com/" target="_blank">by Finest Pixels</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="section middle-section">
-      <div class="content-container content-theme-light">
-        <div class="content-inner">
-          <div class="content-center">
-            <h1>Next Section</h1>
-            <p>
-              Your content here.
-              <a href="#" target="_blank">Link to More Info</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="section bottom-section">
-      <div class="content-container content-theme-dark">
-        <div class="content-inner">
-          <div class="content-center">
-            <h1>Finest</h1>
-            <p>
-              Dual Color Text Effect
-              <a href="http://finestpixels.com/" target="_blank">by Finest Pixels</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-  </body>
+<html>
+<head>
+<style>
+  .container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .circle {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+  }
+  .main-circle {
+    background-color: purple;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* Add more circles */
+  .circle:nth-child(2) {
+    background-color: green;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-200px);
+  }
+  .circle:nth-child(3) {
+    background-color: red;
+    top: 50%;
+    left: 100%;
+    transform: translateX(-200px) translateY(-50%);
+  }
+  .circle:nth-child(4) {
+    background-color: blue;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+  }
+  .circle:nth-child(5) {
+    background-color: yellow;
+    top: 50%;
+    left: 0;
+    transform: translateX(-200px) translateY(-50%);
+  }
+  .circle:nth-child(6) {
+    background-color: orange;
+    top: 0;
+    left: 100%;
+    transform: translateX(-50%) translateY(-200px);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="circle main-circle">Main</div>
+  <div class="circle">1</div>
+  <div class="circle">2</div>
+  <div class="circle">3</div>
+  <div class="circle">4</div>
+  <div class="circle">5</div>
+  <!-- Add more circles -->
+</div>
+</body>
 </html>
