@@ -110,7 +110,6 @@ a:not(.button):hover::before{
 
 /* -----------------------------------------body--------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Raleway:700,900");
-
 * {
   margin: 0;
   padding: 0;
@@ -123,14 +122,12 @@ body {
 a {
   text-decoration: none;
 }
-
 /* Sections */
 .section {
   height: 100vh;
   min-height: 500px;
   position: relative;
 }
-
 /* Containers */
 .content-container {
   position: absolute;
@@ -166,7 +163,6 @@ a {
   justify-content: center;
   flex-direction: column;
 }
-
 /* Aesthetics */
 .top-section {
   background: linear-gradient(135deg, #192655 0%, #192655 100%);
@@ -179,40 +175,76 @@ a {
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
-  /* opacity: 50% ; */
 }
-/* .section p,
-.section a {
-  font-weight: 700;
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  text-align: center;
-} */
-
 .content-theme-dark h1 {
   color: #E1A730;
   text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   opacity: 60%;
 }
-
 .content-theme-dark2 h1 {
   color: #884A39;
   text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   opacity: 90%;
 }
-/* .content-theme-dark p,
-.content-theme-dark a {
-  color: #fea98d;
-} */
 .content-theme-light h1 {
   color: #192655;
   text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   opacity: 80%;
 }
-/* .content-theme-light p,
-.content-theme-light a {
-  color: #728e93;
-} */
+
+/* -----------------------------------new sections----------------------------------------------- */
+/* Additional styles for the specific sections */
+section.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Top right section */
+section.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom left section */
+section.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom right section */
+section.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-container-ai img {
+  width: 20%;
+  height: 20%;
+  margin-right: 100px;
+} 
 
 /* -----------------------------------------Footer------------------------------------------------------ */
 footer {
