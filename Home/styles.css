@@ -172,7 +172,7 @@ a:not(.button):hover::before{
 /* Third section About */
 .banner {
   width: 100%;
-  background: linear-gradient(to right, #dedede, #192655);
+  background: linear-gradient(to right, #004ec2, #192655);
   color: white;
   /* border-radius: 20px; */
 }

@@ -4,10 +4,11 @@ body, h1, h2, h3, p, ul {
 }
 /*-------------------------------------------Header-------------------------------------------*/
 
+
 /*            Fonts             */
 @font-face{
   font-family: Raleway;
-  src: url(fonts/Raleway-Medium.ttf);
+  src: url(static/Raleway-Medium.ttf);
 
 }
 
@@ -95,14 +96,16 @@ a:not(.button):hover::before{
   text-align: center;
   margin-right: 30px;
   margin-top: 5px ;
-  height: 40px;
-  width : 75px;
+  height: 20px;
+
+  width : 55px;
   padding : 10px;
   border-radius: 5px;
   cursor : pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: .5s;
 }
+
 .button:hover, .button:focus, .button:active{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   transition: .5s;
