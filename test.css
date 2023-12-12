@@ -194,72 +194,55 @@ a {
 
 /* -----------------------------------new sections----------------------------------------------- */
 /* Additional styles for the specific sections */
-section.topleft {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* Top right section */
-section.topright {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Bottom left section */
-section.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Bottom right section */
+section.topleft,
+section.topright,
+section.bottomleft,
 section.bottomright {
   position: absolute;
-  bottom: 0;
-  right: 0;
   width: 50%;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Clip overflowing content */
 }
 
-.section-container-ai .img-top-left {
+section.topleft { top: 0; left: 0; }
+section.topright { top: 0; right: 0; }
+section.bottomleft { bottom: 0; left: 0; }
+section.bottomright { bottom: 0; right: 0; }
+
+.section-container-ai .img-top-left,
+.section-container-ai .img-bottom-left { margin-right: 100px; }
+.section-container-ai .img-top-right,
+.section-container-ai .img-bottom-right { margin-left: 100px; }
+
+.section-container-ai p {
+  position: absolute;;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: 2px solid #fff; /* White border */
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  max-width: 80%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.section-container-ai:hover p {
+  opacity: 1;
+}
+.section-container-ai img {
   width: 20%;
   height: 20%;
-  margin-right: 100px;
-} 
-.section-container-ai .img-top-right {
-  width: 20%;
-  height: 20%;
-  margin-left: 100px;
-} 
-.section-container-ai .img-bottom-left {
-  width: 20%;
-  height: 20%;
-  margin-right: 100px;
-} 
-.section-container-ai .img-bottom-right {
-  width: 20%;
-  height: 20%;
-  margin-left: 100px;
-} 
+  transition: transform 0.3s ease; /* Smooth image transition */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.section-container-ai img:hover {
+  transform: scale(1.1); /* Enlarge image on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Change shadow on hover */
+}
 
 /* -----------------------------------------Footer------------------------------------------------------ */
 footer {
