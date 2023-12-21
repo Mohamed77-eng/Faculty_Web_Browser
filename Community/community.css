@@ -1,0 +1,441 @@
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*-------------------------------------------Header-------------------------------------------*/
+/*            Fonts             */
+@font-face{
+  font-family: Raleway;
+  src: url(fonts/Raleway-Medium.ttf);
+}
+
+header {
+  background-color: #192655;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  margin-left: 10px;
+  max-width: 45px; 
+  max-height: 45px; 
+}
+.title {
+  flex-grow: 1; 
+}
+header h1 {
+  color: #dedede;
+  font-size: 22px;
+  font-family: Raleway;
+  margin: 10px;
+  margin-left: 10px;
+}
+
+/*-------------------------------------------Nav Bar-------------------------------------------*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-left: 30px;
+}
+nav ul li:first-child {
+  margin-left: 0;
+}
+nav ul li a {
+  text-transform: capitalize;
+  color: #dedede;
+  font-size: 17px ;
+  font-weight: 200 ;
+  display: inline-flex;
+  align-items: center; 
+  height: 50px; 
+  text-decoration: none;
+  align-items: center;
+}
+nav ul li a.person1 img {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+}
+nav ul li a:not(.button) {
+  position: relative;  /* The postion will be relatively changed upon a::before */
+  font-family: sans-serif;
+  transition: .5s; 
+}
+/*                               Hover Styling                              */
+/* Underline */
+a:not(.button)::before {
+  position : absolute;
+  width : 0%;
+  height: 2px;
+  content: '';
+  background-color: #3876BF;
+  bottom : 10px;
+  transition: .5s;
+}
+a:not(.button):hover {
+  color :#3876BF;
+}
+a:not(.button):hover::before{
+  width : 100%;
+}
+/*                                Button Styling                            */
+.button{
+  font-family : "Roboto", sans-serif;
+  font-size : 15px;
+  background-color: #3876BF;
+  text-align: center;
+  margin-right: 30px;
+  margin-top: 5px ;
+  height: 20px;
+  width : 60px;
+  padding : 10px;
+  border-radius: 5px;
+  cursor : pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: .5s;
+}
+.button:hover, .button:focus, .button:active{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  transition: .5s;
+}
+
+/* -----------------------------------------Sections------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+main {
+  padding: 20px;
+}
+section {
+  margin-bottom: 30px;
+}
+h2 {
+  margin-bottom: 10px;
+}
+.member {
+  text-align: center;
+}
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+section {
+  background-color: #13355b; 
+  color: rgb(245, 235, 235);
+  padding: 20px;
+  border-radius: 8px; 
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+#content{
+  display: inline-block; /* Display events side by side */
+  vertical-align: top; /* Align events to the top */
+  font-size: 16px; /* Reset font size for event contents */
+  
+}
+
+#about {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify; /* Justify text for better readability */
+}
+
+#about h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Additional styling to make the section more professional */
+#about {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Optional: Adding padding for better content spacing */
+#about p {
+  padding-right: 20px;
+}
+
+
+/* -----------------------------------------Events----------------------------------------- */
+.photo-container {
+  font-size: 1.5em;
+  background-color: #2c3e52;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  grid-area: photo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  margin: 10px;
+  display: grid;
+  grid-template-areas: 
+    'photo info';
+  grid-template-columns: 150px 1fr;
+  width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  line-height: 1.75em;
+}
+.info-container {
+  padding: 20px;
+  grid-area: info;
+}
+.event-name {
+  font-weight: bold;
+  padding-bottom: 5px;
+  color: #000;
+}
+.event-location {
+  font-weight: 300;
+  color: #000;
+}
+.day {
+  font-weight: 300;
+}
+.month {
+  font-weight: 600;
+}
+
+@media( max-width: 600px ) {
+  .card-container {
+    width: 90%;
+  }
+}
+
+/* ---------------------------------------contact us------------------------------------- */
+#contactus {
+  background-color: #f5f5f5;
+  padding: 40px;
+  text-align: center;
+}
+
+#contactus h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contactus ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex; /* Display list items horizontally */
+  justify-content: center; /* Center align list items */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+#contactus ul li {
+  margin-right: 20px; /* Space between list items */
+}
+
+#contactus ul li:last-child {
+  margin-right: 0; /* Remove margin from the last list item */
+}
+
+#contactus ul li a {
+  text-decoration: none;
+  color: #3876BF;
+  font-weight: bold;
+}
+
+#mailimg {
+  width: 30px; /* Set the width of the image */
+  height: 30px; /* Set the height of the image */
+  margin-right: 5px; /* Space between icon and text */
+}
+
+
+#contactus ul li a:hover {
+  text-decoration: underline;
+}
+
+#contactus p {
+  color: #555;
+}
+
+#contactus {
+  background-color: #f5f5f5;
+  padding: 40px;
+  text-align: center;
+}
+
+#contactus h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contactus ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#contactus ul li {
+  margin-right: 20px;
+  display: flex; /* Display items as flex for alignment */
+  align-items: center; /* Center vertically */
+}
+
+#mailimg {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+#contactus ul li:last-child {
+  margin-right: 0;
+}
+
+#contactus div {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contactus label {
+  display: block;
+  font-size: 18px; /* Larger font size for labels */
+  color: #555;
+  margin-bottom: 10px; /* Smaller margin below labels */
+}
+
+#comment {
+  width: calc(100% - 20px); /* Set the width of the textarea */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px; /* Space below the textarea */
+}
+
+#comment:focus {
+  border-color: #3876bf;
+  outline: none;
+  box-shadow: 0 0 5px rgba(56, 118, 191, 0.5);
+}
+
+#commentForm input[type="submit"] {
+  padding: 10px 10px;
+  background-color: #3876bf;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#commentForm input[type="submit"]:hover {
+  background-color: #3067a8;
+}
+
+/* -----------------------------------------Footer----------------------------------------- */
+footer {
+  background-color: #192655;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+.footer-content {
+  color: #dedede;
+  font-size: 14px;
+}
+.footer-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.college-logo img {
+  max-width: 35px;
+  max-height: 35px;
+  margin-right: 10px;
+  position: relative; 
+  top: 12px; 
+}
+.college-name h5 {
+  color: #dedede;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1; 
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+.photo-container {
+  font-size: 1.5em;
+  background-color: #2c3e52;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  grid-area: photo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  margin: 10px;
+  display: grid;
+  grid-template-areas: 
+    'photo info';
+  grid-template-columns: 150px 1fr;
+  width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  line-height: 1.75em;
+}
+.info-container {
+  padding: 20px;
+  grid-area: info;
+}
+.event-name {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.event-location {
+  font-weight: 300;
+}
+.day {
+  font-weight: 300;
+}
+.month {
+  font-weight: 600;
+}
+
+@media( max-width: 600px ) {
+  .card-container {
+    width: 90%;
+  }
+}

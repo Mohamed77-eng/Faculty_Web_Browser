@@ -1,14 +1,18 @@
-body, h1, h2, h3, p, ul {
+body,
+h1,
+h2,
+h3,
+p,
+ul {
   margin: 0;
   padding: 0;
 }
 /*-------------------------------------------Header-------------------------------------------*/
 
 /*            Fonts             */
-@font-face{
+@font-face {
   font-family: Raleway;
-  src: url(fonts/Raleway-Medium.ttf);
-
+  src: url(../Home/static/Raleway-Medium.ttf);
 }
 
 header {
@@ -21,12 +25,12 @@ header {
 
 .logo img {
   margin-left: 10px;
-  max-width: 45px; 
-  max-height: 45px; 
+  max-width: 45px;
+  max-height: 45px;
 }
 
 .title {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 header h1 {
@@ -53,8 +57,8 @@ nav ul li:first-child {
 nav ul li a {
   text-transform: capitalize;
   color: #dedede;
-  font-size: 17px ;
-  font-weight: 200 ;
+  font-size: 17px;
+  font-weight: 200;
   display: inline-flex; /* Aligns inline with flexbox properties */
   align-items: center; /* Aligns items vertically */
   height: 50px; /* Set height equal to the image */
@@ -66,46 +70,50 @@ nav ul li a.person1 img {
   height: 50px; /* Adjust height as needed */
 }
 nav ul li a:not(.button) {
-  position: relative;  /* The postion will be relatively changed upon a::before */
+  position: relative; /* The postion will be relatively changed upon a::before */
   font-family: sans-serif;
-  transition: .5s; 
+  transition: 0.5s;
 }
 /*                               Hover Styling                              */
 /* Underline */
 a:not(.button)::before {
-  position : absolute;
-  width : 0%;
+  position: absolute;
+  width: 0%;
   height: 2px;
-  content: '';
-  background-color: #3876BF;
-  bottom : 10px;
-  transition: .5s;
+  content: "";
+  background-color: #3876bf;
+  bottom: 10px;
+  transition: 0.5s;
 }
 a:not(.button):hover {
-  color :#3876BF;
+  color: #3876bf;
 }
-a:not(.button):hover::before{
-  width : 100%;
-}
+/* a:not(.button):hover::before {
+  width: 100%;
+} */
+
 /*                                Button Styling                            */
-.button{
-  font-family : "Roboto", sans-serif;
-  font-size : 15px;
-  background-color: #3876BF;
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  background-color: #3876bf;
   text-align: center;
   margin-right: 30px;
-  margin-top: 5px ;
-  height: 40px;
-  width : 75px;
-  padding : 10px;
+  margin-top: 5px;
+  height: 30px;
+  width: 75px;
+  padding: 3px;
   border-radius: 5px;
-  cursor : pointer;
+  cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: .5s;
+  transition: 0.5s;
+  padding-left: 20px;
 }
-.button:hover, .button:focus, .button:active{
+.button:hover,
+.button:focus,
+.button:active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 /* -----------------------------------------body--------------------------------------- */
@@ -168,7 +176,7 @@ a {
   background: linear-gradient(135deg, #192655 0%, #192655 100%);
 }
 .bottom-section {
-  background: #0766AD;
+  background: #0766ad;
 }
 .section h1 {
   font-size: 200px;
@@ -177,12 +185,12 @@ a {
   text-align: center;
 }
 .content-theme-dark h1 {
-  color: #E1A730;
+  color: #e1a730;
   text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   opacity: 60%;
 }
 .content-theme-dark2 h1 {
-  color: #884A39;
+  color: #884a39;
   text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   opacity: 90%;
 }
@@ -240,26 +248,66 @@ section.bottomright {
   align-items: center;
 }
 
+/*                               from here                         */
 .section-container-ai .img-top-left {
   width: 20%;
   height: 20%;
   margin-right: 100px;
-} 
+  position: absolute;
+  top: 80px; /*change the space between the image and the header*/
+  left: 180px; /*change the space between the image and the page left corner*/
+}
 .section-container-ai .img-top-right {
   width: 20%;
   height: 20%;
   margin-left: 100px;
-} 
+  position: absolute;
+  top: 80px;
+  right: 200px;
+}
 .section-container-ai .img-bottom-left {
   width: 20%;
   height: 20%;
   margin-right: 100px;
-} 
+  position: absolute;
+  bottom: 240px;
+  left: 180px;
+}
 .section-container-ai .img-bottom-right {
   width: 20%;
   height: 20%;
   margin-left: 100px;
-} 
+  position: absolute;
+  bottom: 240px;
+  right: 200px;
+}
+.section-container-ai p {
+  color: rgb(145, 115, 63);
+  font-size: 1.5rem;
+  width: 40%;
+  text-align: left;
+}
+.section-container-ai .para-top-left {
+  position: absolute;
+  top: 200px;
+  left: 120px;
+}
+.section-container-ai .para-top-right {
+  position: absolute;
+  top: 189px;
+  right: 120px;
+}
+.section-container-ai .para-bottom-right {
+  position: absolute;
+  bottom: 80px;
+  right: 120px;
+}
+.section-container-ai .para-bottom-left {
+  position: absolute;
+  bottom: 80px;
+  left: 120px;
+}
+/*                               To here                         */
 
 /* -----------------------------------------Footer------------------------------------------------------ */
 footer {
@@ -267,7 +315,7 @@ footer {
   padding: 10px;
   text-align: center;
   position: relative;
-
+}
 .footer-content {
   color: #dedede;
   font-size: 14px;
@@ -285,14 +333,14 @@ footer {
   max-width: 35px;
   max-height: 35px;
   margin-right: 10px;
-  position: relative; 
-  top: 12px; 
+  position: relative;
+  top: 12px;
 }
 
 .college-name h5 {
   color: #dedede;
   font-size: 18px;
   margin: 0;
-  line-height: 1; 
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
